@@ -1,162 +1,568 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart, Not Scary – A Pragmatic Guide to AI for Later Life</title>
-  <meta name="description" content="A calm, practical guide to AI for older adults. Learn to spot scams, use AI safely, and stay in control. $8.99 PDF, instant download.">
-  
-  <meta property="og:title" content="Smart, Not Scary – A Pragmatic Guide to AI for Later Life">
-  <meta property="og:description" content="A calm, practical guide to AI for older adults. Spot scams, use AI safely, stay in control.">
-  <meta property="og:image" content="cover.jpg">
-  <meta property="og:type" content="website">
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Smart, Not Scary – A Pragmatic Guide to AI for Later Life">
-  <meta name="twitter:image" content="cover.jpg">
-  
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Smart, Not Scary: A Pragmatic Guide to AI for Later Life by Arthur Grant. Stop being annoyed by technology and start using AI as your clever assistant.">
+    <title>Smart, Not Scary | A Pragmatic Guide to AI for Later Life</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --navy-deep: #1a2744;
+            --navy-medium: #2d3e5f;
+            --navy-light: #4a5d7a;
+            --cream: #faf8f5;
+            --cream-dark: #f0ebe3;
+            --gold-accent: #c9a962;
+            --gold-hover: #b8963f;
+            --text-dark: #1f2937;
+            --text-muted: #6b7280;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-dark);
+            background-color: var(--cream);
+            line-height: 1.7;
+            font-size: 1.125rem;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--navy-deep);
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: var(--cream);
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(26, 39, 68, 0.08);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 2px 20px rgba(26, 39, 68, 0.08);
+        }
+
+        .navbar-brand {
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-weight: 700;
+            font-size: 1.35rem;
+            color: var(--navy-deep) !important;
+            letter-spacing: -0.02em;
+        }
+
+        .btn-nav {
+            background-color: var(--navy-deep);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 1rem;
+            border: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-nav:hover {
+            background-color: var(--navy-medium);
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 5rem 0 6rem;
+            background: linear-gradient(175deg, var(--cream) 0%, var(--cream-dark) 100%);
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 20% 80%, rgba(201, 169, 98, 0.06) 0%, transparent 50%),
+                              radial-gradient(circle at 80% 20%, rgba(26, 39, 68, 0.04) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            margin-bottom: 1.5rem;
+            color: var(--navy-deep);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            max-width: 540px;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .btn-primary-custom {
+            background-color: var(--gold-accent);
+            color: var(--navy-deep);
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.15rem;
+            border: none;
+            transition: all 0.25s ease;
+            display: inline-block;
+            text-decoration: none;
+            box-shadow: 0 4px 14px rgba(201, 169, 98, 0.35);
+        }
+
+        .btn-primary-custom:hover {
+            background-color: var(--gold-hover);
+            color: var(--navy-deep);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201, 169, 98, 0.45);
+        }
+
+        .book-cover-wrapper {
+            position: relative;
+        }
+
+        .book-cover {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 25px 50px -12px rgba(26, 39, 68, 0.25),
+                        0 12px 24px -8px rgba(26, 39, 68, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .book-cover:hover {
+            transform: scale(1.02) rotate(-1deg);
+        }
+
+        /* Straight Answer Section */
+        .straight-answer {
+            padding: 5rem 0;
+            background-color: var(--navy-deep);
+            color: white;
+        }
+
+        .straight-answer h2 {
+            color: white;
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .straight-answer p {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 720px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .straight-answer .highlight {
+            color: var(--gold-accent);
+            font-weight: 500;
+        }
+
+        /* Features / Pillars Section */
+        .pillars {
+            padding: 6rem 0;
+            background-color: var(--cream);
+        }
+
+        .pillars h2 {
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .pillars .lead {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 4rem;
+            font-size: 1.15rem;
+        }
+
+        .pillar-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            height: 100%;
+            box-shadow: 0 4px 20px rgba(26, 39, 68, 0.06);
+            border: 1px solid rgba(26, 39, 68, 0.06);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold-accent), var(--navy-light));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(26, 39, 68, 0.12);
+        }
+
+        .pillar-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .pillar-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--navy-deep), var(--navy-medium));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .pillar-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: white;
+            stroke-width: 1.5;
+            fill: none;
+        }
+
+        .pillar-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 1rem;
+            color: var(--navy-deep);
+        }
+
+        .pillar-card p {
+            color: var(--text-muted);
+            margin-bottom: 0;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        /* Safety Section */
+        .safety {
+            padding: 5rem 0;
+            background-color: var(--cream-dark);
+        }
+
+        .safety-box {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            border-left: 5px solid var(--navy-deep);
+            box-shadow: 0 4px 20px rgba(26, 39, 68, 0.06);
+        }
+
+        .safety h2 {
+            font-size: clamp(1.6rem, 3.5vw, 2rem);
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .safety h2 svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--navy-deep);
+            stroke-width: 1.5;
+            fill: none;
+            flex-shrink: 0;
+        }
+
+        .safety p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 0;
+            line-height: 1.8;
+        }
+
+        /* Offer Section */
+        .offer {
+            padding: 6rem 0;
+            background: linear-gradient(175deg, var(--navy-deep) 0%, var(--navy-medium) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .offer h2 {
+            color: white;
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .offer .price {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--gold-accent);
+            margin-bottom: 0.5rem;
+            font-family: 'Libre Baskerville', Georgia, serif;
+        }
+
+        .offer .format {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2rem;
+        }
+
+        .offer .btn-primary-custom {
+            font-size: 1.25rem;
+            padding: 1.1rem 3rem;
+        }
+
+        .offer .note {
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--navy-deep);
+            color: rgba(255, 255, 255, 0.6);
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 0.95rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 991.98px) {
+            .hero {
+                padding: 4rem 0 5rem;
+                text-align: center;
+            }
+
+            .hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .book-cover-wrapper {
+                margin-top: 3rem;
+            }
+
+            .book-cover {
+                max-width: 320px;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .pillars {
+                padding: 4rem 0;
+            }
+
+            .pillar-card {
+                margin-bottom: 1.5rem;
+            }
+
+            .safety-box {
+                padding: 2rem 1.5rem;
+            }
+
+            .offer {
+                padding: 4rem 0;
+            }
+
+            .offer .price {
+                font-size: 2.75rem;
+            }
+        }
+
+        /* Subtle animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+    </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a href="/" class="logo">Smart, Not Scary</a>
-    </div>
-  </header>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Smart, Not Scary</a>
+            <a href="https://buy.stripe.com/dRm00de7lddw5ZQ58YaEE00" class="btn btn-nav">Buy Now</a>
+        </div>
+    </nav>
 
-  <main>
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section class="hero">
-      <div class="container">
-        <div class="hero-layout">
-          <div class="hero-book">
-            <img src="cover.jpg" alt="Smart, Not Scary: A Pragmatic Guide to AI for Later Life by Arthur Grant" class="book-cover">
-          </div>
-          <div class="hero-content">
-            <p class="eyebrow">A Guide for Adults 55+</p>
-            <h1>Smart, Not Scary</h1>
-            <p class="subtitle">A Pragmatic Guide to AI for Later Life</p>
-            
-            <p class="value-prop">Finally, a book about AI that respects your intelligence and your time. No hype. No jargon. Just practical advice you can use today.</p>
-            
-            <ul class="benefit-list">
-              <li>Learn to spot AI scams and deepfakes before they fool you</li>
-              <li>Use AI to simplify health questions, travel, and daily tasks</li>
-              <li>Protect your privacy and know exactly what not to share</li>
-            </ul>
-            
-            <div class="hero-purchase">
-              <a href="https://buy.stripe.com/dRm00de7lddw5ZQ98YaEE00" class="btn btn-primary">Buy PDF – $8.99</a>
-              <p class="trust-line">Instant download · No account required</p>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="animate-in">Smart, Not Scary: A Pragmatic Guide to AI for Later Life</h1>
+                    <p class="hero-subtitle animate-in delay-1">Stop being annoyed by technology. Start using AI as a clever assistant to regain time, clarity, and leverage in everyday life.</p>
+                    <a href="https://buy.stripe.com/dRm00de7lddw5ZQ58YaEE00" class="btn-primary-custom animate-in delay-2">Purchase for $8.99</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="book-cover-wrapper animate-in delay-3">
+                        <img src="cover.jpg" alt="Smart, Not Scary Book Cover - A Pragmatic Guide to AI for Later Life by Arthur Grant" class="book-cover">
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Straight Answer Section -->
+    <section class="straight-answer">
+        <div class="container">
+            <div class="text-center">
+                <h2>This Book Isn't for Everyone</h2>
+                <p>This isn't for tech enthusiasts chasing the latest gadgets or salespeople pitching miracle solutions. <span class="highlight">It's for people who are tired of digital friction</span>—confusing medical portals, recipes that assume you know what "fold in" means, and forms that seem designed to frustrate. If you've ever wanted technology to simply <em>work for you</em> without the hassle, this guide was written with you in mind.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three Key Pillars Section -->
+    <section class="pillars">
+        <div class="container">
+            <h2>What You'll Learn</h2>
+            <p class="lead">Three practical ways AI can simplify your daily life</p>
             
-            <p class="kindle-status">Kindle edition coming soon</p>
-          </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            </svg>
+                        </div>
+                        <h3>Health Translator</h3>
+                        <p>Turn confusing lab results into plain English and prepare for doctor visits so you can spend your 15 minutes discussing a plan—rather than asking for definitions.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <svg viewBox="0 0 24 24">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <h3>Financial &amp; Daily Logic</h3>
+                        <p>Decode opaque medical bills, navigate insurance jargon with confidence, and plan travel that respects your actual energy levels—not some guidebook's marathon itinerary.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 20h9"/>
+                                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                            </svg>
+                        </div>
+                        <h3>Preserving History</h3>
+                        <p>Use voice mode to turn your memories into a written legacy. Share your stories, recipes, and wisdom without the intimidation of staring at a blank page.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- Social Proof Bar -->
-    <section class="proof-bar">
-      <div class="container">
-        <ul class="proof-items">
-          <li>
-            <strong>14</strong>
-            <span>Short chapters</span>
-          </li>
-          <li>
-            <strong>50+</strong>
-            <span>Ready-to-use prompts</span>
-          </li>
-          <li>
-            <strong>Includes</strong>
-            <span>Printable scam checklist</span>
-          </li>
-          <li>
-            <strong>Written in</strong>
-            <span>Plain English</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- What You'll Learn -->
-    <section class="learn-section">
-      <div class="container">
-        <h2>What You'll Learn</h2>
-        <p class="section-intro">Each chapter addresses a real situation you might face—with clear explanations and specific steps you can take.</p>
-        
-        <div class="learn-grid">
-          <article class="learn-card">
-            <h3>Recognize Scams</h3>
-            <p>Deepfakes, voice cloning, phishing emails that sound like family. You'll learn the warning signs and exactly what to do when something feels off.</p>
-          </article>
-          
-          <article class="learn-card">
-            <h3>Understand Health Information</h3>
-            <p>Use AI to translate confusing medical terms, prepare questions for your doctor, and make sense of test results—without replacing professional advice.</p>
-          </article>
-          
-          <article class="learn-card">
-            <h3>Protect Your Privacy</h3>
-            <p>Know what's safe to share with AI tools and what you should keep private. Simple rules that don't require technical knowledge.</p>
-          </article>
-          
-          <article class="learn-card">
-            <h3>Simplify Daily Life</h3>
-            <p>Get help planning travel, writing emails, managing finances, and making everyday decisions. AI as a useful assistant, not a replacement for your judgment.</p>
-          </article>
+    <!-- Safety / Essential Boundary Section -->
+    <section class="safety">
+        <div class="container">
+            <div class="safety-box">
+                <h2>
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    The Essential Boundary
+                </h2>
+                <p>AI is a powerful tool for <strong>explanation and preparation</strong>—helping you understand complex information and arrive at appointments informed and confident. But it is never a substitute for professional judgment. This book emphasizes that AI should never be used for making final medical diagnoses, legal decisions, or binding financial commitments. The human expert—your doctor, your lawyer, your advisor—always has the last word.</p>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- About the Author -->
-    <section class="author-section">
-      <div class="container">
-        <h2>About the Author</h2>
-        <div class="author-content">
-          <p><strong>Arthur Grant</strong> wrote this book after spending months helping his parents and their friends make sense of AI. He tested dozens of tools, sorted the genuinely useful from the overhyped, and translated everything into plain language.</p>
-          <p>This isn't a book about the future of technology. It's a practical guide for people who want to use AI safely today—without becoming experts or changing how they live.</p>
+    <!-- The Offer Section -->
+    <section class="offer">
+        <div class="container">
+            <h2>Get Your Copy Today</h2>
+            <div class="price">$8.99</div>
+            <p class="format">Instant Digital Download (PDF)</p>
+            <a href="https://buy.stripe.com/dRm00de7lddw5ZQ58YaEE00" class="btn-primary-custom">Purchase Now</a>
+            <p class="note">Your PDF will begin downloading automatically after purchase.</p>
         </div>
-      </div>
     </section>
 
-    <!-- Email Capture -->
-    <section class="signup-section" id="free-sample">
-      <div class="container">
-        <div class="signup-box">
-          <h2>Try Before You Buy</h2>
-          <p>Get a <strong>free sample chapter</strong> and the <strong>AI Scam Checklist</strong> (PDF) delivered to your inbox.</p>
-          
-          <form action="https://formspree.io/f/REPLACE_ME" method="POST" class="signup-form">
-            <label for="email" class="visually-hidden">Your email address</label>
-            <input type="email" id="email" name="email" placeholder="Your email address" required>
-            <button type="submit" class="btn btn-primary">Send Me the Free Chapter</button>
-          </form>
-          <p class="form-note">No spam. Unsubscribe anytime. We respect your privacy.</p>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Arthur Grant. All rights reserved.</p>
         </div>
-      </div>
-    </section>
+    </footer>
 
-    <!-- Final CTA -->
-    <section class="final-cta">
-      <div class="container">
-        <h2>Ready to Feel Confident with AI?</h2>
-        <p>This book won't make you a technology expert. It will help you use AI tools safely, ask better questions, and get on with your life.</p>
-        
-        <a href="https://buy.stripe.com/dRm00de7lddw5ZQ98YaEE00" class="btn btn-primary btn-large">Buy PDF – $8.99</a>
-        <p class="trust-line">Instant download · Secure payment via Stripe</p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p class="footer-title">Smart, Not Scary</p>
-      <p class="footer-author">by Arthur Grant</p>
-      <p class="footer-contact">Questions? <a href="mailto:hello@smartnotscary.com">hello@smartnotscary.com</a></p>
-      <p class="footer-copyright">© 2026 Arthur Grant. All rights reserved.</p>
-    </div>
-  </footer>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
