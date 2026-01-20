@@ -7,43 +7,114 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="stylesheet" href="styles.css">
   <style>
-    .thanks-page {
+    .thank-you-page {
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .thank-you-main {
+      flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      padding: 2rem;
+      padding: 3rem 1.5rem;
+      background: linear-gradient(180deg, #fafafa 0%, #fff 100%);
     }
-    .thanks-content { max-width: 480px; }
-    .icon { font-size: 4rem; margin-bottom: 1rem; }
-    .download-btn { margin: 2rem 0; }
-    .note {
-      font-size: 0.9rem;
-      color: #555;
-      background: #f8f7f5;
-      padding: 1rem;
+    
+    .thank-you-content {
+      max-width: 480px;
+      text-align: center;
+    }
+    
+    .success-icon {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 1.5rem;
+      background: #4a7c59;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .success-icon svg {
+      width: 36px;
+      height: 36px;
+      stroke: #fff;
+      stroke-width: 3;
+      fill: none;
+    }
+    
+    .thank-you-content h1 {
+      font-size: 2.25rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .thank-you-content > p {
+      color: #4a5568;
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+    }
+    
+    .download-area {
+      margin-bottom: 2rem;
+    }
+    
+    .usage-note {
+      background: #f7f7f5;
+      border: 1px solid #e8e8e8;
       border-radius: 8px;
-      margin-top: 2rem;
+      padding: 1.25rem;
+      font-size: 0.9375rem;
+      color: #4a5568;
+      margin-bottom: 2rem;
+    }
+    
+    .usage-note a {
+      color: #4a7c59;
+    }
+    
+    .back-link {
+      font-size: 0.9375rem;
     }
   </style>
 </head>
-<body>
-  <main class="thanks-page">
-    <div class="thanks-content">
-      <div class="icon">✓</div>
+<body class="thank-you-page">
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="logo">Smart, Not Scary</a>
+    </div>
+  </header>
+
+  <main class="thank-you-main">
+    <div class="thank-you-content">
+      <div class="success-icon">
+        <svg viewBox="0 0 24 24">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+      
       <h1>Thank You!</h1>
       <p>Your copy of <strong>Smart, Not Scary</strong> is ready to download.</p>
       
-      <a href="https://drive.google.com/uc?export=download&id=19hMth2YOf1kCFmonEvrf22UtPVr10cF4" class="btn btn-primary btn-large download-btn">Download PDF</a>
+      <div class="download-area">
+        <a href="https://drive.google.com/uc?export=download&id=19hMth2YOf1kCFmonEvrf22UtPVr10cF4" class="btn btn-primary btn-large">Download Your PDF</a>
+      </div>
       
-      <p class="note">
-        This download is for your personal use only.<br>
-        Questions? <a href="mailto:hello@smartnotscary.com">hello@smartnotscary.com</a>
-      </p>
+      <div class="usage-note">
+        This download is for your personal use only. If you have any questions or issues, please contact <a href="mailto:hello@smartnotscary.com">hello@smartnotscary.com</a>
+      </div>
       
-      <p><a href="index.html">← Back to homepage</a></p>
+      <p class="back-link"><a href="index.html">← Return to homepage</a></p>
     </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-title">Smart, Not Scary</p>
+      <p class="footer-copyright">© 2026 Arthur Grant. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
