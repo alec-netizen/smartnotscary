@@ -1,526 +1,129 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI for Older Adults: A Practical Guide | Smart, Not Scary</title>
-  <meta name="description" content="A calm, practical guide to AI for older adults and caregivers. No hype, no jargon—just clear advice on using technology wisely. PDF and Kindle.">
-  <link rel="canonical" href="https://example.com/">
+  <title>Smart, Not Scary – A Pragmatic Guide to AI for Later Life</title>
+  <meta name="description" content="A calm, practical guide to AI for older adults. Learn to spot scams, use AI safely, and stay in control. $8.99 PDF instant download.">
   
-  <!-- Open Graph -->
-  <meta property="og:title" content="Smart, Not Scary: A Pragmatic Guide to AI for Later Life">
-  <meta property="og:description" content="A calm, practical guide to AI for older adults and caregivers. No hype, no jargon—just clear advice on using technology wisely.">
-  <meta property="og:type" content="book">
-  <meta property="og:url" content="https://example.com/">
-  <meta property="og:image" content="https://example.com/og-image.jpg">
-  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Smart, Not Scary – A Pragmatic Guide to AI for Later Life">
+  <meta property="og:description" content="A calm, practical guide to AI for older adults. Spot scams, use AI safely, stay in control. $8.99 PDF.">
+  <meta property="og:image" content="cover.jpg">
+  <meta property="og:type" content="website">
   
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Smart, Not Scary: A Pragmatic Guide to AI for Later Life">
-  <meta name="twitter:description" content="A calm, practical guide to AI for older adults and caregivers. No hype, no jargon—just clear advice.">
-  <meta name="twitter:image" content="https://example.com/twitter-image.jpg">
+  <meta name="twitter:title" content="Smart, Not Scary – A Pragmatic Guide to AI for Later Life">
+  <meta name="twitter:image" content="cover.jpg">
   
-  <!-- Favicon placeholders -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Book",
-    "name": "Smart, Not Scary: A Pragmatic Guide to AI for Later Life",
-    "author": {
-      "@type": "Person",
-      "name": "Arthur Grant"
-    },
-    "isbn": "9798244712889",
-    "datePublished": "2026-01-01",
-    "bookFormat": "EBook",
-    "numberOfPages": "180",
-    "inLanguage": "en",
-    "genre": "Self-Help",
-    "audience": {
-      "@type": "Audience",
-      "audienceType": "Adults 55+, Caregivers"
-    },
-    "description": "A calm, practical guide to AI for older adults and caregivers. No hype, no jargon—just clear advice on using technology wisely.",
-    "offers": [
-      {
-        "@type": "Offer",
-        "availability": "https://schema.org/InStock",
-        "price": "9.99",
-        "priceCurrency": "USD",
-        "url": "STRIPE_CHECKOUT_URL_HERE",
-        "description": "PDF Direct Download"
-      },
-      {
-        "@type": "Offer",
-        "availability": "https://schema.org/InStock",
-        "url": "AMAZON_KINDLE_URL_HERE",
-        "description": "Amazon Kindle Edition"
-      }
-    ]
-  }
-  </script>
-  
-  <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-    
-    :root {
-      --color-text: #1a1a1a;
-      --color-text-muted: #555;
-      --color-bg: #fff;
-      --color-bg-alt: #f7f7f5;
-      --color-accent: #2c5282;
-      --color-accent-hover: #1a365d;
-      --color-border: #e2e2e2;
-      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      --max-width: 42rem;
-      --spacing-sm: 0.5rem;
-      --spacing-md: 1rem;
-      --spacing-lg: 2rem;
-      --spacing-xl: 3rem;
-    }
-    
-    html {
-      font-size: 100%;
-      scroll-behavior: smooth;
-    }
-    
-    body {
-      font-family: var(--font-stack);
-      font-size: 1.125rem;
-      line-height: 1.6;
-      color: var(--color-text);
-      background: var(--color-bg);
-      margin: 0;
-      padding: 0;
-    }
-    
-    a {
-      color: var(--color-accent);
-      text-decoration: underline;
-    }
-    
-    a:hover {
-      color: var(--color-accent-hover);
-    }
-    
-    a:focus, button:focus, details:focus {
-      outline: 3px solid var(--color-accent);
-      outline-offset: 2px;
-    }
-    
-    h1, h2, h3 {
-      line-height: 1.25;
-      margin-top: 0;
-    }
-    
-    h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: var(--spacing-md);
-    }
-    
-    h2 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: var(--spacing-md);
-      padding-top: var(--spacing-lg);
-    }
-    
-    p {
-      margin: 0 0 var(--spacing-md) 0;
-    }
-    
-    ul {
-      margin: 0 0 var(--spacing-md) 0;
-      padding-left: 1.5rem;
-    }
-    
-    li {
-      margin-bottom: var(--spacing-sm);
-    }
-    
-    .container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 var(--spacing-md);
-    }
-    
-    header {
-      padding: var(--spacing-md) 0;
-      border-bottom: 1px solid var(--color-border);
-    }
-    
-    .site-title {
-      font-size: 1rem;
-      font-weight: 600;
-      margin: 0;
-    }
-    
-    .hero {
-      padding: var(--spacing-xl) 0;
-      text-align: center;
-    }
-    
-    .hero p {
-      color: var(--color-text-muted);
-      max-width: 36rem;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .subtitle {
-      font-size: 1.25rem;
-      color: var(--color-text-muted);
-      margin-bottom: var(--spacing-md);
-    }
-    
-    .cta-group {
-      display: flex;
-      flex-direction: column;
-      gap: var(--spacing-md);
-      align-items: center;
-      margin-top: var(--spacing-lg);
-    }
-    
-    .btn {
-      display: inline-block;
-      padding: 0.875rem 1.75rem;
-      font-size: 1rem;
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 4px;
-      border: 2px solid transparent;
-      cursor: pointer;
-      transition: background 0.15s, border-color 0.15s;
-    }
-    
-    .btn-primary {
-      background: var(--color-accent);
-      color: #fff;
-      border-color: var(--color-accent);
-    }
-    
-    .btn-primary:hover {
-      background: var(--color-accent-hover);
-      border-color: var(--color-accent-hover);
-      color: #fff;
-    }
-    
-    .btn-secondary {
-      background: transparent;
-      color: var(--color-accent);
-      border-color: var(--color-accent);
-    }
-    
-    .btn-secondary:hover {
-      background: var(--color-bg-alt);
-    }
-    
-    section {
-      padding: var(--spacing-lg) 0;
-    }
-    
-    .section-alt {
-      background: var(--color-bg-alt);
-    }
-    
-    .buy-options {
-      display: grid;
-      gap: var(--spacing-lg);
-    }
-    
-    .buy-option {
-      padding: var(--spacing-lg);
-      border: 1px solid var(--color-border);
-      border-radius: 6px;
-      background: var(--color-bg);
-    }
-    
-    .buy-option h3 {
-      font-size: 1.25rem;
-      margin-bottom: var(--spacing-sm);
-    }
-    
-    details {
-      margin-bottom: var(--spacing-md);
-      border: 1px solid var(--color-border);
-      border-radius: 4px;
-      padding: var(--spacing-md);
-    }
-    
-    summary {
-      cursor: pointer;
-      font-weight: 600;
-      list-style: none;
-    }
-    
-    summary::-webkit-details-marker {
-      display: none;
-    }
-    
-    summary::before {
-      content: "+ ";
-      font-weight: 400;
-    }
-    
-    details[open] summary::before {
-      content: "− ";
-    }
-    
-    details p {
-      margin-top: var(--spacing-md);
-      margin-bottom: 0;
-    }
-    
-    .trust-list {
-      list-style: none;
-      padding: 0;
-    }
-    
-    .trust-list li {
-      padding-left: 1.5rem;
-      position: relative;
-    }
-    
-    .trust-list li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--color-accent);
-    }
-    
-    .final-cta {
-      text-align: center;
-      padding: var(--spacing-xl) 0;
-    }
-    
-    footer {
-      border-top: 1px solid var(--color-border);
-      padding: var(--spacing-lg) 0;
-      font-size: 0.875rem;
-      color: var(--color-text-muted);
-    }
-    
-    footer p {
-      margin-bottom: var(--spacing-sm);
-    }
-    
-    @media (min-width: 640px) {
-      h1 {
-        font-size: 2.5rem;
-      }
-      
-      .cta-group {
-        flex-direction: row;
-        justify-content: center;
-      }
-      
-      .buy-options {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
     <div class="container">
-      <p class="site-title">Smart, Not Scary</p>
+      <span class="site-name">Smart, Not Scary</span>
     </div>
   </header>
-  
+
   <main>
-    <!-- Hero Section -->
     <section class="hero">
-      <div class="container">
-        <h1>A Practical Guide to AI for Older Adults</h1>
-        <p class="subtitle">Smart, Not Scary: A Pragmatic Guide to AI for Later Life</p>
-        <p>by Arthur Grant</p>
-        <p>You've heard the hype about artificial intelligence. You've also heard the warnings. What you haven't heard is a straight answer about whether any of it is actually useful to you. This book offers a calm, grounded approach—focused on everyday problems, not science fiction.</p>
-        <div class="cta-group">
-          <!-- Replace STRIPE_CHECKOUT_URL_HERE with your actual Stripe Checkout link -->
-          <a href="STRIPE_CHECKOUT_URL_HERE" class="btn btn-primary">Buy the PDF (Instant Download)</a>
-          <!-- Replace AMAZON_KINDLE_URL_HERE with your actual Amazon product link -->
-          <a href="AMAZON_KINDLE_URL_HERE" class="btn btn-secondary">Buy on Amazon Kindle</a>
+      <div class="container hero-grid">
+        <div class="hero-image">
+          <img src="cover.jpg" alt="Smart, Not Scary book cover by Arthur Grant" class="cover-img">
+        </div>
+        <div class="hero-content">
+          <h1>Smart, Not Scary</h1>
+          <p class="subhead">A pragmatic guide to AI for later life</p>
+          
+          <ul class="benefits">
+            <li><strong>Spot scams and deepfakes</strong> before they fool you</li>
+            <li><strong>Use AI for everyday tasks</strong> — email, travel, health questions</li>
+            <li><strong>Stay in control</strong> — protect your privacy, know what not to share</li>
+          </ul>
+          
+          <p class="price-line"><strong>$8.99</strong> · Instant PDF download after purchase</p>
+          
+          <div class="cta-buttons">
+            <a href="https://buy.stripe.com/dRm00de7lddw5ZQ98YaEE00" class="btn btn-primary">Buy PDF – $8.99</a>
+            <a href="#free-sample" class="btn btn-secondary">Get free sample</a>
+          </div>
+          
+          <p class="kindle-note"><span class="badge">Coming Soon</span> Kindle edition</p>
         </div>
       </div>
     </section>
-    
-    <!-- Why This Book Exists -->
-    <section class="section-alt">
+
+    <section class="proof">
       <div class="container">
-        <h2>Why This Book Exists</h2>
-        <p>Modern technology was supposed to make life simpler. For many people, it has done the opposite.</p>
-        <p>Medical portals send test results without explanations. Banks expect you to manage your own fraud detection. Travel planning now requires a dozen apps. The burden of figuring things out has quietly shifted from institutions to individuals.</p>
-        <p>Most conversations about AI fall into two categories: breathless enthusiasm or apocalyptic fear. Neither is useful if you simply want to know whether AI can help you understand a confusing bill or prepare better questions for your doctor.</p>
-        <p>This book takes a different approach. It treats AI as a tool—useful in some situations, unhelpful in others, and occasionally risky if used carelessly. It respects your judgment. It assumes you have better things to do than master technology for its own sake.</p>
-      </div>
-    </section>
-    
-    <!-- What You'll Get -->
-    <section>
-      <div class="container">
-        <h2>What You'll Get</h2>
-        <ul>
-          <li>14 chapters covering health, money, family, safety, and daily life</li>
-          <li>Practical examples you can use immediately</li>
-          <li>Clear explanations written at a readable pace</li>
-          <li>Honest assessments of where AI helps and where it doesn't</li>
-          <li>No jargon, no hype, no breathless predictions</li>
+        <ul class="proof-list">
+          <li>✓ 14 short chapters</li>
+          <li>✓ 50+ copy-paste prompts</li>
+          <li>✓ Printable scam checklist</li>
+          <li>✓ Plain English, no jargon</li>
         </ul>
       </div>
     </section>
-    
-    <!-- What This Helps With -->
-    <section class="section-alt">
+
+    <section class="features">
       <div class="container">
-        <h2>What This Helps With</h2>
-        <p>This practical AI guide addresses real situations:</p>
-        <ul>
-          <li><strong>Understanding medical information</strong> — Translate test results and medication inserts into plain language</li>
-          <li><strong>Reducing decision fatigue</strong> — Get help with meal planning, shopping lists, and routine logistics</li>
-          <li><strong>Avoiding AI scams and deepfakes</strong> — Learn what AI-powered fraud looks like and how to protect yourself</li>
-          <li><strong>Preserving family history</strong> — Capture life stories and restore old photographs</li>
-          <li><strong>Preparing for appointments</strong> — Organize questions for doctors, lawyers, or advisors</li>
-          <li><strong>Managing money on a fixed income</strong> — Understand bills and statements without stress</li>
-          <li><strong>Bridging generational gaps</strong> — Find common ground with younger family members around technology</li>
-        </ul>
-        <p>This is technology for seniors who want clarity, not confusion. For caregivers managing someone else's health and logistics. For anyone who values judgment over novelty.</p>
+        <h2>What You'll Learn</h2>
+        <div class="features-grid">
+          <div class="feature">
+            <h3>Recognize AI Scams</h3>
+            <p>Deepfakes, voice cloning, phishing emails. Learn the red flags.</p>
+          </div>
+          <div class="feature">
+            <h3>Use AI Daily</h3>
+            <p>Help with medical info, travel plans, emails, and decisions.</p>
+          </div>
+          <div class="feature">
+            <h3>Protect Privacy</h3>
+            <p>Know what to share and what to keep private.</p>
+          </div>
+          <div class="feature">
+            <h3>Ask Better Questions</h3>
+            <p>Get useful answers instead of confusing nonsense.</p>
+          </div>
+        </div>
       </div>
     </section>
-    
-    <!-- About the Author -->
-    <section>
+
+    <section class="author">
       <div class="container">
         <h2>About the Author</h2>
-        <p>Arthur Grant wrote this book because he kept having the same conversation.</p>
-        <p>Someone would mention feeling left behind by technology—not dramatically, but quietly. They weren't asking for a tutorial. They were asking whether any of it was worth their time.</p>
-        <p>Arthur believes that question deserves a straight answer. He has no interest in making AI sound more impressive than it is, and no interest in dismissing it out of hand. The truth, he believes, is somewhere in the middle—and that middle ground is where most useful things live.</p>
+        <p><strong>Arthur Grant</strong> wrote this book after helping his parents and their friends navigate AI tools. He spent months testing what works and what doesn't, then translated it all into plain language. This is a practical guide for anyone who wants to use AI safely without becoming a tech expert.</p>
       </div>
     </section>
-    
-    <!-- How to Buy -->
-    <section class="section-alt">
+
+    <section class="email-capture" id="free-sample">
       <div class="container">
-        <h2>How to Buy</h2>
-        <p>Choose the format that works best for you.</p>
-        <div class="buy-options">
-          <div class="buy-option">
-            <h3>Buy the PDF Directly</h3>
-            <p>Purchase from this site and receive instant access.</p>
-            <ul>
-              <li>Delivered immediately after payment</li>
-              <li>Downloadable PDF for any device</li>
-              <li>No Amazon account required</li>
-              <li>Secure checkout via Stripe</li>
-            </ul>
-            <!-- Replace STRIPE_CHECKOUT_URL_HERE with your Stripe Checkout link -->
-            <a href="STRIPE_CHECKOUT_URL_HERE" class="btn btn-primary">Buy the PDF</a>
-          </div>
-          <div class="buy-option">
-            <h3>Buy on Amazon Kindle</h3>
-            <p>Prefer reading on your Kindle or Kindle app?</p>
-            <ul>
-              <li>Standard Kindle pricing</li>
-              <li>Syncs across your devices</li>
-              <li>Familiar Amazon checkout</li>
-            </ul>
-            <!-- Replace AMAZON_KINDLE_URL_HERE with your Amazon link -->
-            <a href="AMAZON_KINDLE_URL_HERE" class="btn btn-secondary">Buy on Amazon</a>
-          </div>
-        </div>
+        <h2>Try Before You Buy</h2>
+        <p class="offer">Get a <strong>free sample chapter</strong> + <strong>AI Scam Checklist</strong> (PDF)</p>
+        
+        <form action="https://formspree.io/f/REPLACE_ME" method="POST" class="signup-form">
+          <label for="email" class="sr-only">Email address</label>
+          <input type="email" id="email" name="email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-primary">Send it to me</button>
+        </form>
+        <p class="privacy-note">No spam. Unsubscribe anytime.</p>
       </div>
     </section>
-    
-    <!-- Trust & Accessibility -->
-    <section>
-      <div class="container">
-        <h2>Trust &amp; Accessibility</h2>
-        <ul class="trust-list">
-          <li>No subscription required—one purchase, permanent access</li>
-          <li>No upsells or follow-up sales pitches</li>
-          <li>Simple checkout with secure payment processing</li>
-          <li>Screen-reader friendly design</li>
-          <li>Works on phone, tablet, computer, or e-reader</li>
-          <li>PDF is DRM-free—it's yours to keep</li>
-        </ul>
-      </div>
-    </section>
-    
-    <!-- FAQ -->
-    <section class="section-alt">
-      <div class="container">
-        <h2>Frequently Asked Questions</h2>
-        
-        <details>
-          <summary>Is this book technical?</summary>
-          <p>No. It assumes no prior experience with AI. Everything is explained in plain language. The focus is on practical use, not how the technology works under the hood.</p>
-        </details>
-        
-        <details>
-          <summary>Do I need to already use AI to benefit from this book?</summary>
-          <p>Not at all. The book is designed for readers who are just starting out, as well as those who have tried AI tools but aren't sure how to use them well.</p>
-        </details>
-        
-        <details>
-          <summary>Is this medical, legal, or financial advice?</summary>
-          <p>No. The book explains how to use AI to better understand medical and financial information, but it clearly states that AI is not a substitute for professional advice. It emphasizes using AI to prepare and organize—not to decide.</p>
-        </details>
-        
-        <details>
-          <summary>Can caregivers use this book?</summary>
-          <p>Yes. Several chapters address AI for caregivers directly, including organizing medical information for a loved one, preparing for appointments on someone else's behalf, and managing the cognitive load of care.</p>
-        </details>
-        
-        <details>
-          <summary>What formats are available?</summary>
-          <p>The book is available as a PDF (instant download from this site) and as a Kindle ebook on Amazon. Both contain identical content.</p>
-        </details>
-      </div>
-    </section>
-    
-    <!-- Final CTA -->
+
     <section class="final-cta">
       <div class="container">
-        <h2>Ready to Read?</h2>
-        <p>This book won't change your life overnight. But if you finish it with a clearer sense of when AI helps, when it doesn't, and when to be careful—it will have done its job.</p>
-        <div class="cta-group">
-          <a href="STRIPE_CHECKOUT_URL_HERE" class="btn btn-primary">Buy the PDF (Instant Download)</a>
-          <a href="AMAZON_KINDLE_URL_HERE" class="btn btn-secondary">Buy on Amazon Kindle</a>
-        </div>
+        <h2>Ready to Feel Confident with AI?</h2>
+        <p>Use AI safely and get on with your life.</p>
+        <a href="https://buy.stripe.com/dRm00de7lddw5ZQ98YaEE00" class="btn btn-primary btn-large">Buy PDF – $8.99</a>
+        <p class="note">Instant download · No account needed</p>
       </div>
     </section>
   </main>
-  
+
   <footer>
     <div class="container">
-      <p><strong>Smart, Not Scary: A Pragmatic Guide to AI for Later Life</strong></p>
-      <p>by Arthur Grant</p>
-      <p>
-        <a href="STRIPE_CHECKOUT_URL_HERE">Buy PDF</a> · 
-        <a href="AMAZON_KINDLE_URL_HERE">Buy on Amazon</a>
-      </p>
-      <p>© 2026 Arthur Grant. All rights reserved.</p>
+      <p><strong>Smart, Not Scary</strong> by Arthur Grant</p>
+      <p><a href="mailto:hello@smartnotscary.com">hello@smartnotscary.com</a></p>
+      <p class="copyright">© 2026 Arthur Grant</p>
     </div>
   </footer>
-  
-  <!--
-    STRIPE INTEGRATION NOTES:
-    Replace all instances of STRIPE_CHECKOUT_URL_HERE with your actual Stripe Checkout link.
-    To create a Stripe Checkout link:
-    1. Go to Stripe Dashboard > Payment Links
-    2. Create a new payment link for your PDF product
-    3. Copy the generated URL and replace the placeholder
-    
-    AMAZON LINK:
-    Replace AMAZON_KINDLE_URL_HERE with your actual Amazon product page URL.
-  -->
 </body>
 </html>
